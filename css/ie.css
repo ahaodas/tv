@@ -1,0 +1,5 @@
+.bgBlur::after{
+content:'';
+display:none;    
+
+}

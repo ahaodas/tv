@@ -1,0 +1,641 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body{
+background: url(../img/tower.jpg)  no-repeat;
+background-size: cover; 
+background-attachment: fixed;    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+
+}
+
+h1,h2,h3,b{
+font-weight: 400;
+text-align: left;    
+}
+
+h1{
+
+}
+
+
+
+
+
+.ch-logo-img{
+max-width:50%;
+
+}
+.ch-logo{
+height: 7em;    
+text-align:left;
+}
+.chanal-title{
+
+margin:0;
+}
+.chanal-title h2{
+margin:0;
+
+}
+
+
+.wrapper{
+max-width:72%;
+margin:auto;
+  
+    
+}
+
+.content-center{
+text-align: center;
+}
+
+.blurBg:before{
+content:'';    
+position:absolute;
+z-index: -1; 
+top:0; 
+    left:0;
+ width:100%;   
+height:100%;
+background: url(../img/tower.jpg)  no-repeat;
+background-attachment: fixed; 
+background-size: cover;
+-webkit-filter:blur(20px);
+filter:blur(20px);
+
+  
+}
+
+section{
+   
+ position: relative;
+ background: rgba(0,0,0,0.5);
+ max-width:100%;    
+ color:white;    
+ box-shadow: 0 0 10px rgba(0,0,0,0.6); 
+ margin:auto;
+ margin-top:3em;
+ margin-bottom:3em;
+ padding:3em 3em;    
+  
+}
+
+header{
+    left:20px;
+background:cyan;    
+
+}
+
+
+
+
+
+
+footer{
+   
+
+height:200px;
+background:#020203;    
+}
+
+table{
+  
+    text-align: left;
+    /* padding: 0.5em; */
+    /* float: left; */
+    vertical-align: top;
+     margin-right: 1em; 
+    /* width: 22%; */
+    margin-top: 50px;
+    display: inline-block;
+}
+
+
+td{
+    
+
+    float: left;
+    max-width: 13em;
+    word-wrap: break-word;
+    padding: 0.2em;
+    /* padding-right: 2%; */
+    vertical-align: text-bottom;
+    /* min-width: 20px; */
+
+}
+.tv-name{
+   
+width:20%;
+min-width: 100px;    
+}
+
+.title{
+    text-align: left;
+  
+   width: 8em; 
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+     position: relative; 
+}
+
+
+.title:hover
+{
+    
+text-decoration: underline;
+    }
+
+
+.title:hover .description-wrapper{
+   display:block;
+}
+
+
+.title:hover .description-wrapper .description {
+ animation:fadein 0.3s ease;  
+} 
+
+
+.description-wrapper{
+   z-index:99; 
+
+display:none;
+   
+position:absolute;
+width:250px;
+left:100px;
+top:-20px;    
+
+}
+.description{
+padding:1em;
+background:white;
+color:black;    
+border-radius: 2px 2px;
+}
+.description img{
+width:100%;
+}
+
+.day+label{
+box-sizing: border-box;
+display:inline-block;
+margin-left: -5px;
+
+padding:0 0.5em;   
+font-size:2em;
+border-left:1px solid white;
+
+
+}
+
+
+
+.genre+label{
+   
+text-align: center;    
+width:5em;    
+font-size: 1.2em;    
+display: inline-block;    
+margin-top:2em;
+box-shadow:inset 0 0 10px rgba(0,0,0,0.6); 
+}
+
+
+
+.category{
+display: none;
+}
+
+
+
+.day+label:hover{
+    
+outline:1px solid white;
+outline-offset: -1px;    
+}
+.day:checked+label{
+
+background: white;
+color:black;    
+}
+
+
+
+#mo:checked ~article:not(#monday),
+#te:checked ~article:not(#Tuesday),
+#we:checked ~article:not(#wensday),
+#fr:checked ~article:not(#friday),
+#su:checked ~article:not(#sunday){
+display:none;
+}
+
+
+
+
+#mo:checked +label~#monday,
+#te:checked +label~#Tuesday,
+#we:checked +label~#wensday,
+#fr:checked +label~#friday,
+#su:checked +label~#sunday{
+animation:fadein 0.5s ease;    
+display:block;
+} 
+
+#serials:checked ~article table tbody .serial
+{
+color: cyan;
+
+}
+#serials:checked+label{
+
+    color:cyan;    
+}
+
+
+#sports:checked ~article table tbody .sport
+{
+   color: yellow;
+}
+#sports:checked +label{
+
+    color: yellow;   
+}
+
+#films:checked ~article table tbody .film
+{
+color: magenta;
+
+}
+#films:checked+label{
+
+    color: magenta;   
+}
+
+@keyframes fadein{
+
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}  
+}
+
+
+.time{
+padding-right: 1em;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+/*
+@media only screen and (max-width:1908px) {
+
+#su+label{
+margin-right: 0;
+}  
+}   
+@media only screen and (max-width:1815px) {
+
+
+.day+label{
+font-size: 1.9em;
+}
+    
+}    
+
+@media only screen and (max-width:1731px) {
+
+
+.day+label{
+font-size: 1.8em;
+}
+    
+}    
+*/
+
+
+@media only screen and (max-width:845px) {
+
+    
+    .wrapper{
+max-width: 90%;
+} 
+    
+section{
+padding: 1em;
+
+}    
+
+.genre+label{
+padding:0.5em 0;
+width:30%;    
+}
+    
+.day+label{
+border-left:none;
+}
+    
+.content-center{
+min-height: 40em;    
+position: relative;
+width:90%;
+margin-left: 5%;    
+overflow-x: scroll;
+overflow-y: hidden;    
+}    
+
+    .mobile-scroll{
+    height: 100em;    
+   left: -80%;
+    width: 400%;
+    position: absolute;
+   
+
+
+}      
+    
+    
+    
+    
+}
+
+@media only screen and (max-width:634px) {
+
+
+ .mobile-scroll{
+left: -30%;
+}
+    
+}
+
+@media only screen and (max-width:560px) {
+
+    
+    
+    
+.title:hover .description-wrapper{
+   display:none;
+}
+
+
+.title:hover .description-wrapper .description {
+ animation:none;  
+} 
+    
+    
+    
+    
+.mobile-content-center{
+    
+text-align: center;
+/*overflow-x: scroll;    
+ overflow-y: visible;*/
+}
+.description-wrapper{
+left: -55%;
+top:150%;    
+
+}    
+ .wrapper{
+     
+ }  
+
+
+@media only screen and (max-width:500px) {
+
+  
+.blurBg:before{
+    
+display:none;
+}    
+    
+.wrapper{
+background: rgba(0,0,0,0.4);
+    
+max-width: 100%;
+}    
+section{
+padding: 1em;
+
+}
+.day+label{
+font-size: 2em;
+margin-top: 0;
+display:block;
+float:none;    
+}
+.mobile-content-center{
+    
+    margin: 0;}    
+}    
+    
+@media only screen and (max-width:484px) {
+
+
+ .mobile-scroll{
+left: -30%;
+}  
+}
+    
+    
+@media only screen and (max-width:471px) {
+
+
+ .mobile-scroll{
+left:0;
+}
+    
+}
+
+
+
+@media only screen and (max-width:352px) {
+
+
+.genre+label{
+width:31%;    
+padding:0.5em 0;
+font-size: 0.8em;    
+}
+  .mobile-scroll{
+  left: 0;
+  
+  }  
+}
+
+  
+    
+    
+    
+h1{text-align: center;}    
+    
+   
+section{
+padding: 1.5em;
+
+}
+    
+    
+
+}
+
+
