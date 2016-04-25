@@ -170,11 +170,10 @@ background:#020203;
 table{
   
     text-align: left;
-    /* padding: 0.5em; */
-    /* float: left; */
+   
     vertical-align: top;
-     margin-right: 1em; 
-    /* width: 22%; */
+    padding:0 0.5em; 
+ 
     margin-top: 50px;
     display: inline-block;
 }
@@ -325,9 +324,11 @@ color:black;
 
 
 #mo:checked ~article:not(#monday),
-#te:checked ~article:not(#Tuesday),
+#tu:checked ~article:not(#tuesday),
 #we:checked ~article:not(#wensday),
+#th:checked ~article:not(#thurthday),
 #fr:checked ~article:not(#friday),
+#st:checked ~article:not(#saturday),
 #su:checked ~article:not(#sunday){
 display:none;
 }
@@ -336,9 +337,11 @@ display:none;
 
 
 #mo:checked +label~#monday,
-#te:checked +label~#Tuesday,
+#tu:checked +label~#tuesday,
 #we:checked +label~#wensday,
+#th:checked +label~#thurthday,
 #fr:checked +label~#friday,
+#st:checked +label~#saturday,
 #su:checked +label~#sunday{
 animation:fadein 0.5s ease;    
 display:block;
